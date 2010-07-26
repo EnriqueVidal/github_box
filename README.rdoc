@@ -1,5 +1,4 @@
 ==GithubBox
-=========
 
 GithubBox is just a rails helper for creating a repositories box based on the github username passed as argument.
 
@@ -39,8 +38,7 @@ That will generate a box with an unorderd list of proyects with links to the pro
 
 GithubBox supports one additional parameter which is the options hash to specify if want to display the number of watchers, forks, creation date or push date here is an example
 
-Example
-=======
+=== Example
 
   show_github_repository_box 'EnriqueVidal', :created_at => true, :pushed_at => true, :forks => true, :watchers => true
 
