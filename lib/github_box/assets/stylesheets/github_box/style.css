@@ -1,0 +1,48 @@
+.github_box {
+  color:#333;
+  font: 0.75em 'Lucida Grande',sans-serif;
+  width: 230px;
+  overflow: auto;
+  font-size: 12px;
+}
+
+.github_box ul.repository_list li.repository {
+  border-bottom: 1px solid #EEEEEE;
+  list-style-type:none;
+  margin:0;
+  padding:5px 0;
+}
+
+li.repository span
+{
+    text-align: justify;
+}
+
+li.repository a
+{
+  color: #2276BB !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+li.repository .date
+{
+  color:#999999;
+  display:block;
+  font-size:11px;
+}
+
+li.repository .more_info
+{
+  color:#333;
+  display:block;
+  font-size:11px;
+}
+
+li.repository
+{
+float:right;
+position:relative;
+width:230px;
+}
+

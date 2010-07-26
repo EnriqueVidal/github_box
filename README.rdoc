@@ -1,0 +1,48 @@
+==GithubBox
+=========
+
+GithubBox is just a rails helper for creating a repositories box based on the github username passed as argument.
+
+=== Installation
+
+To install GithubBox just do the following:
+
+  script/plugin install git://github.com/EnriqueVidal/github_box.git
+
+And that's it GithubBox has been successfully installed.
+
+=== Usage
+
+Add the following to the top of the controller you want to use github_box in:
+
+  uses_github_box
+
+The uses_github_box method receive a parameter that can limit the actions on which it will be used:
+
+  uses_github_box :only => :show
+
+That way the CSS for github_box will only be loaded on the show action of that controller.
+
+To add the CSS to our layou just put this on your website layout:
+
+  include_github_box_if_needed
+
+This will add the CSS required if we are in the right action (as specifien with uses_github_box).
+
+Finally to add a box to your curren view just use the helper like this:
+
+  show_github_repository_box 'username'
+
+That will generate a box with an unorderd list of proyects with links to the proyect page and their respective description.
+
+=== Additional parameters
+
+GithubBox supports one additional parameter which is the options hash to specify if want to display the number of watchers, forks, creation date or push date here is an example
+
+Example
+=======
+
+  show_github_repository_box 'EnriqueVidal', :created_at => true, :pushed_at => true, :forks => true, :watchers => true
+
+By default all the options hash keys are ignored unless they are initialized with something like true.
+
